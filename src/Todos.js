@@ -12,7 +12,9 @@ const Todos = ({ todos }) => {
   ) : (
     <p className="center"> You have no todo's left, yay1</p>
   );
-  return <div className="todos collection"></div>;
+  return <div className="todos collection">
+    {todoList}
+  </div>;
 };
 
 export default Todos;
