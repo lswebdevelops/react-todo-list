@@ -8,12 +8,17 @@ class App extends Component {
     ]
   }
 
+    deleteTodo = (id) => {
+      console.log(id);
+    }
   render() {
     
     return (
     <div className="todo-app container">
       <h1 className="center blue-text">Todo's</h1>
-      <Todos todos={this.state.todos} />
+      <Todos 
+        deleteTodo={this.deleteTodo}
+        todos={this.state.todos} />
     </div>
   );
 }
