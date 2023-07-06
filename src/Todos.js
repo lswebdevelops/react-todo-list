@@ -6,12 +6,15 @@ const Todos = ({ todos, deleteTodo }) => {
       return (
         <div key={todo.id} className="collection-item">
           <span
-            onClick={() => {
-              deleteTodo(todo.id);
-            }}
+           
           >
             {todo.content}
           </span>
+          <button
+           onClick={() => {
+            deleteTodo(todo.id);
+          }}
+          > X </button>
         </div>
       );
     })
