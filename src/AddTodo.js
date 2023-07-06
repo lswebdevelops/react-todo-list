@@ -14,6 +14,10 @@ class AddTodo extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
        this.props.addTodo(this.state)
+       // empting the input after enter 
+       this.setState({
+        content: ""
+       })
     }
 
 
@@ -23,7 +27,7 @@ class AddTodo extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Add New Todo:</label>
-                    <input type="text" onChange={this.handleChange}/>
+                    <input type="text" onChange={this.handleChange} value={this.state.content}/>
                 </form>
             </div>
         )
