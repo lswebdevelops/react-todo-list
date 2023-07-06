@@ -1,4 +1,5 @@
 import React from "react";
+import { FaTrashAlt } from "react-icons/fa";
 
 const Todos = ({ todos, deleteTodo }) => {
   const todoList = todos.length ? (
@@ -14,7 +15,8 @@ const Todos = ({ todos, deleteTodo }) => {
            onClick={() => {
             deleteTodo(todo.id);
           }}
-          > X </button>
+          className="delete-button"
+          ><FaTrashAlt /></button>
         </div>
       );
     })
